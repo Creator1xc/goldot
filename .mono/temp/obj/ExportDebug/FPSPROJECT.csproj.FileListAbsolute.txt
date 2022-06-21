@@ -1,0 +1,9 @@
+C:\Users\krist\Documents\FPSPROJECT\.mono\temp\bin\ExportDebug\FPSPROJECT.dll
+C:\Users\krist\Documents\FPSPROJECT\.mono\temp\bin\ExportDebug\FPSPROJECT.pdb
+C:\Users\krist\Documents\FPSPROJECT\.mono\temp\obj\ExportDebug\FPSPROJECT.csproj.AssemblyReference.cache
+C:\Users\krist\Documents\FPSPROJECT\.mono\temp\obj\ExportDebug\FPSPROJECT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krist\Documents\FPSPROJECT\.mono\temp\obj\ExportDebug\FPSPROJECT.AssemblyInfoInputs.cache
+C:\Users\krist\Documents\FPSPROJECT\.mono\temp\obj\ExportDebug\FPSPROJECT.AssemblyInfo.cs
+C:\Users\krist\Documents\FPSPROJECT\.mono\temp\obj\ExportDebug\FPSPROJECT.csproj.CoreCompileInputs.cache
+C:\Users\krist\Documents\FPSPROJECT\.mono\temp\obj\ExportDebug\FPSPROJECT.dll
+C:\Users\krist\Documents\FPSPROJECT\.mono\temp\obj\ExportDebug\FPSPROJECT.pdb

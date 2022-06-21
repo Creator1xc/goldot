@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://models/weapons/w_crowbar.mdl" type="PackedScene" id=1]
+[ext_resource path="res://bin/weapons/weapon_crowbar.gd" type="Script" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.46601, 0.503072, 0.0460853 )
+
+[node name="w_crowbar" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="STUDIO" parent="." index="1"]
+transform = Transform( 0.07, 0, 0, 0, 0.07, -1.32349e-23, 0, -1.32349e-23, 0.07, 0, 0, 0 )
+
+[node name="Hitbox" type="Area" parent="." index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.201504, 8.80803e-09, -1.43734 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Hitbox" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.02339e-08, 3.07002e-15, 1.60676 )
+shape = SubResource( 1 )

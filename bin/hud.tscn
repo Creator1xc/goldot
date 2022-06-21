@@ -1,0 +1,62 @@
+[gd_scene format=2]
+
+[node name="hud" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ammo" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -227.0
+margin_top = -56.0
+
+[node name="ammo_text" type="Label" parent="ammo"]
+margin_left = 12.0
+margin_top = 12.0
+margin_right = 157.0
+margin_bottom = 43.0
+text = "Ammo
+"
+
+[node name="ammo_counter" type="Label" parent="ammo"]
+margin_left = 66.0
+margin_top = 12.0
+margin_right = 106.0
+margin_bottom = 26.0
+text = "null
+"
+
+[node name="health" type="Control" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 13.0
+margin_top = -39.0
+margin_right = 124.0
+margin_bottom = -14.0
+
+[node name="ColorRect" type="ColorRect" parent="health"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.301961 )
+
+[node name="Label" type="Label" parent="health"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -18.0
+margin_right = 46.0
+margin_bottom = -4.0
+text = "Health"
+
+[node name="health_count" type="Label" parent="health"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -55.0
+margin_top = -19.0
+margin_right = -3.0
+margin_bottom = -3.0
+text = "NULL"

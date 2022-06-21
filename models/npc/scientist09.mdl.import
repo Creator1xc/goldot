@@ -1,0 +1,14 @@
+[remap]
+
+importer="GoldSrc mdl importer"
+type="PackedScene"
+path="res://.import/scientist09.mdl-ededdec4cc0c667b2b2899fbb093201b..tscn"
+
+[deps]
+
+source_file="res://models/npc/scientist09.mdl"
+dest_files=[ "res://.import/scientist09.mdl-ededdec4cc0c667b2b2899fbb093201b..tscn" ]
+
+[params]
+
+texture_filtering=false

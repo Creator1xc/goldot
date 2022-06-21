@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pl_gun3.wav-7d93cf6891de4c0ea4102b8d0470233f.sample"
+
+[deps]
+
+source_file="res://sounds/weapons/pl_gun3.wav"
+dest_files=[ "res://.import/pl_gun3.wav-7d93cf6891de4c0ea4102b8d0470233f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

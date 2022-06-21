@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://bin/vgui/console.gd" type="Script" id=1]
+[ext_resource path="res://bin/vgui/command_handler.gd" type="Script" id=2]
+
+[node name="console" type="WindowDialog"]
+anchor_left = 0.767
+anchor_top = 0.259
+anchor_right = 0.767
+anchor_bottom = 0.259
+margin_left = -181.408
+margin_top = -75.4
+margin_right = 180.592
+margin_bottom = 166.6
+window_title = "Console"
+script = ExtResource( 1 )
+
+[node name="input" type="LineEdit" parent="."]
+anchor_top = 0.88
+anchor_right = 0.707
+anchor_bottom = 0.982
+margin_top = 0.0399933
+margin_right = 0.0659943
+margin_bottom = 1.35599
+
+[node name="enter" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -86.0
+margin_top = -27.0
+margin_right = -5.0
+margin_bottom = -5.0
+text = "Send"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.042
+anchor_top = 0.04
+anchor_right = 0.958
+anchor_bottom = 0.82
+margin_left = -2.204
+margin_top = 0.32
+margin_right = -0.796021
+margin_bottom = -0.440018
+color = Color( 0.165665, 0.161133, 0.1875, 1 )
+
+[node name="output" type="RichTextLabel" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+scroll_following = true
+
+[node name="command_handler" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[connection signal="popup_hide" from="." to="." method="_on_console_popup_hide"]
+[connection signal="text_entered" from="input" to="." method="_on_input_text_entered"]

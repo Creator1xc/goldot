@@ -1,0 +1,14 @@
+[remap]
+
+importer="GoldSrc mdl importer"
+type="PackedScene"
+path="res://.import/w_9mmhandgunt.mdl-b659b3471e53567244bd6b687c1c99a9..tscn"
+
+[deps]
+
+source_file="res://models/weapons/w_9mmhandgunt.mdl"
+dest_files=[ "res://.import/w_9mmhandgunt.mdl-b659b3471e53567244bd6b687c1c99a9..tscn" ]
+
+[params]
+
+texture_filtering=false

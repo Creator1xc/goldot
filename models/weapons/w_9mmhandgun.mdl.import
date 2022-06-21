@@ -1,0 +1,14 @@
+[remap]
+
+importer="GoldSrc mdl importer"
+type="PackedScene"
+path="res://.import/w_9mmhandgun.mdl-7ebb5233e449697176112ae80d6dc404..tscn"
+
+[deps]
+
+source_file="res://models/weapons/w_9mmhandgun.mdl"
+dest_files=[ "res://.import/w_9mmhandgun.mdl-7ebb5233e449697176112ae80d6dc404..tscn" ]
+
+[params]
+
+texture_filtering=false

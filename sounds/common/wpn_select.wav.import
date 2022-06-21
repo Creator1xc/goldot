@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wpn_select.wav-a3c9f2a7986bb79c297acccb8a62beb6.sample"
+
+[deps]
+
+source_file="res://sounds/common/wpn_select.wav"
+dest_files=[ "res://.import/wpn_select.wav-a3c9f2a7986bb79c297acccb8a62beb6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,147 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://bin/info_player_start.gd" type="Script" id=1]
+[ext_resource path="res://bin/pause.tscn" type="PackedScene" id=2]
+[ext_resource path="res://bin/weapons/player_crowbar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sounds/common/wpn_moveselect.wav" type="AudioStream" id=4]
+[ext_resource path="res://bin/weapons/player_glock.tscn" type="PackedScene" id=5]
+[ext_resource path="res://bin/hud.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sounds/common/wpn_select.wav" type="AudioStream" id=7]
+[ext_resource path="res://sounds/common/wpn_denyselect.wav" type="AudioStream" id=8]
+[ext_resource path="res://bin/viewmodel.gd" type="Script" id=9]
+[ext_resource path="res://sounds/items/gunpickup2.wav" type="AudioStream" id=10]
+[ext_resource path="res://sounds/fvox/bell.wav" type="AudioStream" id=11]
+[ext_resource path="res://bin/footsteps.gd" type="Script" id=12]
+[ext_resource path="res://sounds/player/pl_step1.wav" type="AudioStream" id=13]
+[ext_resource path="res://sounds/player/pl_step4.wav" type="AudioStream" id=14]
+[ext_resource path="res://sounds/player/pl_step2.wav" type="AudioStream" id=15]
+[ext_resource path="res://sounds/player/pl_step3.wav" type="AudioStream" id=16]
+[ext_resource path="res://sounds/player/pl_jump2.wav" type="AudioStream" id=17]
+
+[sub_resource type="CapsuleShape" id=1]
+height = 2.5
+
+[sub_resource type="CylinderShape" id=2]
+
+[sub_resource type="BoxShape" id=3]
+
+[sub_resource type="Animation" id=6]
+resource_name = "attack1"
+length = 0.416667
+
+[node name="info_player_start" type="KinematicBody" groups=["Player"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.64705, 0 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="Foot" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.25417, 0 )
+shape = SubResource( 2 )
+
+[node name="Groundcheck" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+enabled = true
+
+[node name="Head" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38859, 0 )
+
+[node name="use_cast" type="RayCast" parent="Head"]
+enabled = true
+exclude_parent = false
+cast_to = Vector3( 0, 0, -20 )
+debug_shape_custom_color = Color( 0.72549, 0.14902, 0.14902, 1 )
+
+[node name="Camera" type="Camera" parent="Head"]
+cull_mask = 1048573
+
+[node name="melee_hitbox" type="Area" parent="Head/Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.01096 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Head/Camera/melee_hitbox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="ViewportContainer" type="ViewportContainer" parent="Head/Camera"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Viewport" type="Viewport" parent="Head/Camera/ViewportContainer"]
+size = Vector2( 2560, 1140 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Viewmodel_Camera" type="Camera" parent="Head/Camera/ViewportContainer/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.01968, 0 )
+cull_mask = 2
+fov = 90.0
+
+[node name="aim_cast" type="RayCast" parent="Head/Camera"]
+cast_to = Vector3( 0, 0, -100 )
+
+[node name="view" type="Spatial" parent="Head"]
+script = ExtResource( 9 )
+sway_left = Vector3( 0, -0.4, 0 )
+sway_right = Vector3( 0, 0.4, 0 )
+
+[node name="v_crowbar" parent="Head/view" instance=ExtResource( 3 )]
+
+[node name="v_9mmhandgun" parent="Head/view" instance=ExtResource( 5 )]
+
+[node name="flashlight" type="SpotLight" parent="Head"]
+visible = false
+shadow_enabled = true
+spot_range = 23.8984
+spot_angle = 17.7997
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Head")
+anims/attack1 = SubResource( 6 )
+
+[node name="hud" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="selection" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="pause_menu" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="use" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="not_use" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="weapon_pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="suit_pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="footsteps" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.18951, 0 )
+script = ExtResource( 12 )
+
+[node name="concrete" type="Spatial" parent="footsteps"]
+
+[node name="concrete4" type="AudioStreamPlayer" parent="footsteps/concrete"]
+stream = ExtResource( 14 )
+
+[node name="concrete3" type="AudioStreamPlayer" parent="footsteps/concrete"]
+stream = ExtResource( 16 )
+
+[node name="concrete1" type="AudioStreamPlayer" parent="footsteps/concrete"]
+stream = ExtResource( 13 )
+
+[node name="concrete2" type="AudioStreamPlayer" parent="footsteps/concrete"]
+stream = ExtResource( 15 )
+
+[node name="footstep_interval" type="Timer" parent="footsteps"]
+one_shot = true
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )

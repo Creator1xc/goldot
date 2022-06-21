@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://models/weapons/v_crowbar/v_crowbar.glb" type="PackedScene" id=1]
+
+[node name="v_crowbar" instance=ExtResource( 1 )]
+
+[node name="crowbar_reference" parent="v_crowbar/Skeleton" index="0"]
+layers = 2
+cast_shadow = 0

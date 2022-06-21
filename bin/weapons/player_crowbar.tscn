@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://models/weapons/v_crowbar.mdl" type="PackedScene" id=1]
+[ext_resource path="res://bin/weapons/player_crowbar.gd" type="Script" id=2]
+[ext_resource path="res://sounds/weapons/cbar_hit1.wav" type="AudioStream" id=3]
+[ext_resource path="res://sounds/weapons/cbar_miss1.wav" type="AudioStream" id=4]
+
+[node name="v_crowbar" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="anims" parent="." index="0"]
+autoplay = "idle3"
+
+[node name="STUDIO" parent="." index="1"]
+layers = 2
+
+[node name="hit_solid" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource( 3 )
+
+[node name="miss" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource( 4 )
+
+[node name="cooldown" type="Timer" parent="." index="4"]
+one_shot = true

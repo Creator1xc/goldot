@@ -1,0 +1,14 @@
+[remap]
+
+importer="GoldSrc mdl importer"
+type="PackedScene"
+path="res://.import/w_suitt.mdl-e0d42f0a08cfd946fa9f43bc1ddcac37..tscn"
+
+[deps]
+
+source_file="res://models/items/w_suitt.mdl"
+dest_files=[ "res://.import/w_suitt.mdl-e0d42f0a08cfd946fa9f43bc1ddcac37..tscn" ]
+
+[params]
+
+texture_filtering=false

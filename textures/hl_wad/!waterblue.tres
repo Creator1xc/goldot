@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://shaders/water.tres" type="Shader" id=1]
+[ext_resource path="res://textures/hl_wad/!waterblue.png" type="Texture" id=2]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/amplitude = Vector2( 0.2, 0.1 )
+shader_param/frequency = Vector2( 3, 2.5 )
+shader_param/time_factor = Vector2( 2, 3 )
+shader_param/texture_scale = Vector2( 1, 1 )
+shader_param/texturemap = ExtResource( 2 )

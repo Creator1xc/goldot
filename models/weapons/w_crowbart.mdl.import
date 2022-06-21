@@ -1,0 +1,14 @@
+[remap]
+
+importer="GoldSrc mdl importer"
+type="PackedScene"
+path="res://.import/w_crowbart.mdl-8d5df35efdd025e49bca881d4d27604d..tscn"
+
+[deps]
+
+source_file="res://models/weapons/w_crowbart.mdl"
+dest_files=[ "res://.import/w_crowbart.mdl-8d5df35efdd025e49bca881d4d27604d..tscn" ]
+
+[params]
+
+texture_filtering=false

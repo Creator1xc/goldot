@@ -1,0 +1,4 @@
+[gd_scene format=2]
+
+[node name="w_9mmhandgunt" type="Skeleton"]
+transform = Transform( -4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, 1, -1, 4.37114e-08, -4.37114e-08, 0, 0, 0 )
