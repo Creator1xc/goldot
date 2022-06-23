@@ -2,36 +2,36 @@
 
 [ext_resource path="res://addons/qodot/game_definitions/fgd/point_classes/light.gd" type="Script" id=1]
 [ext_resource path="res://maps/test.lmbake" type="BakedLightmapData" id=2]
-[ext_resource path="res://test.tres" type="ArrayMesh" id=3]
-[ext_resource path="res://addons/qodot/game_definitions/fgd/solid_classes/button.gd" type="Script" id=4]
-[ext_resource path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" type="Resource" id=5]
-[ext_resource path="res://addons/qodot/src/nodes/qodot_map.gd" type="Script" id=6]
+[ext_resource path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" type="Resource" id=3]
+[ext_resource path="res://test.tres" type="ArrayMesh" id=4]
+[ext_resource path="res://addons/qodot/game_definitions/fgd/solid_classes/button.gd" type="Script" id=5]
+[ext_resource path="res://textures/hl_wad/c1a0_labflre.png" type="Texture" id=6]
 [ext_resource path="res://addons/qodot/game_definitions/fgd/solid_classes/physics.gd" type="Script" id=7]
-[ext_resource path="res://addons/qodot/game_definitions/fgd/solid_classes/mover.gd" type="Script" id=8]
+[ext_resource path="res://bin/brush/test_useable.gd" type="Script" id=8]
 [ext_resource path="res://bin/info_player_start.gd" type="Script" id=9]
-[ext_resource path="res://bin/brush/test_useable.gd" type="Script" id=10]
-[ext_resource path="res://textures/hl_wad/c1a0_labflre.png" type="Texture" id=11]
-[ext_resource path="res://textures/hl_wad/+0button1.png" type="Texture" id=12]
-[ext_resource path="res://textures/hl_wad/bcrate18.png" type="Texture" id=13]
-[ext_resource path="res://textures/hl_wad/c1a0_labw4.png" type="Texture" id=14]
-[ext_resource path="res://textures/hl_wad/!waterblue.tres" type="Material" id=15]
-[ext_resource path="res://bin/weapons/weapon_crowbar.gd" type="Script" id=16]
-[ext_resource path="res://textures/hl_wad/{rail1c.tres" type="Material" id=17]
-[ext_resource path="res://bin/npc/npc_scientist.gd" type="Script" id=18]
-[ext_resource path="res://bin/weapons/weapon_glock.gd" type="Script" id=19]
-[ext_resource path="res://maps/test.cs" type="Script" id=20]
-[ext_resource path="res://bin/weapons/weapon_crowbar.tscn" type="PackedScene" id=21]
-[ext_resource path="res://bin/npc/npc_scientist1.tscn" type="PackedScene" id=22]
-[ext_resource path="res://bin/info_player_start.tscn" type="PackedScene" id=23]
-[ext_resource path="res://bin/weapons/weapon_glock.tscn" type="PackedScene" id=24]
+[ext_resource path="res://addons/qodot/game_definitions/fgd/solid_classes/mover.gd" type="Script" id=10]
+[ext_resource path="res://addons/qodot/src/nodes/qodot_map.gd" type="Script" id=11]
+[ext_resource path="res://textures/hl_wad/{rail1c.tres" type="Material" id=12]
+[ext_resource path="res://maps/test.cs" type="Script" id=13]
+[ext_resource path="res://textures/hl_wad/!waterblue.tres" type="Material" id=14]
+[ext_resource path="res://textures/hl_wad/+0button1.png" type="Texture" id=15]
+[ext_resource path="res://textures/hl_wad/bcrate18.png" type="Texture" id=16]
+[ext_resource path="res://textures/hl_wad/c1a0_labw4.png" type="Texture" id=17]
+[ext_resource path="res://sounds/doors/doormove1.wav" type="AudioStream" id=18]
+[ext_resource path="res://sounds/doors/doorstop6.wav" type="AudioStream" id=19]
+[ext_resource path="res://bin/brush/moveable.gd" type="Script" id=20]
+[ext_resource path="res://bin/npc/npc_scientist.gd" type="Script" id=21]
+[ext_resource path="res://bin/info_player_start.tscn" type="PackedScene" id=22]
+[ext_resource path="res://prefabs/small_door.tscn" type="PackedScene" id=23]
+[ext_resource path="res://bin/npc/npc_scientist1.tscn" type="PackedScene" id=24]
 
 [sub_resource type="SpatialMaterial" id=1]
 
 [sub_resource type="SpatialMaterial" id=73]
-albedo_texture = ExtResource( 11 )
+albedo_texture = ExtResource( 6 )
 
 [sub_resource type="SpatialMaterial" id=74]
-albedo_texture = ExtResource( 14 )
+albedo_texture = ExtResource( 17 )
 
 [sub_resource type="ArrayMesh" id=75]
 lightmap_size_hint = Vector2( 1330, 1318 )
@@ -54,7 +54,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 2194743,
 "index_count": 252,
-"material": ExtResource( 17 ),
+"material": ExtResource( 12 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 168
@@ -78,7 +78,7 @@ surfaces/3 = {
 "blend_shape_data": [  ],
 "format": 2194743,
 "index_count": 36,
-"material": ExtResource( 15 ),
+"material": ExtResource( 14 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 24
@@ -160,7 +160,7 @@ points = PoolVector3Array( -0.5, 3, -2, -0.5, -3, -2, 0.5, -3, -2, 0.5, 3, -2, -
 points = PoolVector3Array( -3.625, 3.25, -3, -5.125, -1.25, -3, 4.375, -1.25, -3, 4.375, -0.75, -3, -3.625, 3.25, 3, -5.125, -1.25, 3, 4.375, -1.25, 3, 4.375, -0.75, 3 )
 
 [sub_resource type="SpatialMaterial" id=105]
-albedo_texture = ExtResource( 12 )
+albedo_texture = ExtResource( 15 )
 
 [sub_resource type="ArrayMesh" id=106]
 lightmap_size_hint = Vector2( 38, 34 )
@@ -181,7 +181,7 @@ surfaces/0 = {
 points = PoolVector3Array( -0.0625, 0.5, -0.5, -0.0625, -0.5, -0.5, 0.0625, -0.5, -0.5, 0.0625, 0.5, -0.5, -0.0625, 0.5, 0.5, -0.0625, -0.5, 0.5, 0.0625, -0.5, 0.5, 0.0625, 0.5, 0.5 )
 
 [sub_resource type="SpatialMaterial" id=108]
-albedo_texture = ExtResource( 13 )
+albedo_texture = ExtResource( 16 )
 
 [sub_resource type="ArrayMesh" id=109]
 lightmap_size_hint = Vector2( 206, 138 )
@@ -213,10 +213,10 @@ ambient_light_sky_contribution = 0.0
 [node name="Spatial" type="Spatial"]
 
 [node name="QodotMap" type="Spatial" parent="." groups=["World"]]
-script = ExtResource( 6 )
+script = ExtResource( 11 )
 map_file = "C:/Users/krist/Documents/FPSPROJECT/maps/test.map"
 inverse_scale_factor = 16.0
-entity_fgd = ExtResource( 5 )
+entity_fgd = ExtResource( 3 )
 base_texture_dir = "res://textures"
 texture_file_extensions = PoolStringArray( "png" )
 worldspawn_layers = [  ]
@@ -311,8 +311,8 @@ shape = SubResource( 97 )
 shape = SubResource( 98 )
 
 [node name="entity_1_mover" type="KinematicBody" parent="QodotMap"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 8, -8 )
-script = ExtResource( 8 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 13, -8 )
+script = ExtResource( 10 )
 properties = {
 "classname": "mover",
 "targetname": "door",
@@ -320,7 +320,7 @@ properties = {
 }
 
 [node name="entity_1_mesh_instance" type="MeshInstance" parent="QodotMap/entity_1_mover"]
-mesh = ExtResource( 3 )
+mesh = ExtResource( 4 )
 material/0 = null
 
 [node name="entity_1_brush_0_collision_shape" type="CollisionShape" parent="QodotMap/entity_1_mover"]
@@ -347,7 +347,7 @@ shape = SubResource( 104 )
 
 [node name="entity_4_button" type="Area" parent="QodotMap"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0625, 8.5, -5.5 )
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 properties = {
 "classname": "button",
 "target": "door"
@@ -374,9 +374,8 @@ shadow_enabled = true
 omni_range = 16.0
 
 [node name="entity_7_physics" type="RigidBody" parent="QodotMap"]
-transform = Transform( 1, 1.26086e-06, -0.000491637, -1.26001e-06, 1, 1.72569e-06, 0.000491637, -1.72507e-06, 1, -18.9729, 3.08, -15.9794 )
-linear_velocity = Vector3( -2.30564e-05, 9.10461e-06, -5.3172e-05 )
-angular_velocity = Vector3( 3.99536e-06, 8.0502e-06, 3.40584e-06 )
+transform = Transform( 0.996286, -3.67949e-08, 0.086106, 3.9797e-08, 1, -3.31491e-08, -0.086106, 3.64527e-08, 0.996286, -18.502, 3.08, -16.3306 )
+sleeping = true
 script = ExtResource( 7 )
 properties = {
 "classname": "physics"
@@ -404,17 +403,17 @@ light_bake_mode = 2
 shadow_enabled = true
 omni_range = 16.0
 
-[node name="info_player_start" type="KinematicBody" parent="." groups=["Player"] instance=ExtResource( 23 )]
-transform = Transform( 0.763796, 0, -0.645458, 0, 1, 0, 0.645458, 0, 0.763796, -34.9422, 3.29467, -11.1962 )
+[node name="info_player_start" type="KinematicBody" parent="." groups=["Player"] instance=ExtResource( 22 )]
+transform = Transform( 0.187378, 0, -0.982266, 0, 1, 0, 0.982266, 0, 0.187378, 5.5453, 3.29467, -8.42481 )
 script = ExtResource( 9 )
 speed = 20
-h_velocity = Vector3( 0.00713674, 0, -0.0460821 )
-current_weapon = 1
+h_velocity = Vector3( 0.200952, 0, -0.0378845 )
+current_weapon = 3
 flashlight_on = false
 health = 200
-got_crowbar = false
-got_glock = false
-got_any_weapons = false
+got_crowbar = true
+got_glock = true
+got_any_weapons = true
 got_suit = true
 
 [node name="Portal" type="Portal" parent="."]
@@ -432,23 +431,14 @@ environment = SubResource( 72 )
 
 [node name="useable" type="StaticBody" parent="." groups=["Useable"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.2833, 3.52528, -2.95561 )
-script = ExtResource( 10 )
+script = ExtResource( 8 )
 
 [node name="CSGBox" type="CSGBox" parent="useable"]
 
 [node name="CollisionShape" type="CollisionShape" parent="useable"]
 shape = SubResource( 111 )
 
-[node name="w_crowbar" type="Skeleton" parent="." instance=ExtResource( 21 )]
-transform = Transform( -4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, 1, -1, 4.37114e-08, -4.37114e-08, -35.7323, 0.96256, -15.0164 )
-bones/0/name = "BOX01"
-bones/0/parent = -1
-bones/0/rest = Transform( 0.00792586, -3.13907e-07, -0.999969, 0.999969, 2.48806e-09, 0.00792586, 0, -1, 3.13916e-07, 14.3846, 0.410458, 1.51251 )
-bones/0/enabled = true
-bones/0/bound_children = [  ]
-script = ExtResource( 16 )
-
-[node name="scientist" type="Skeleton" parent="." instance=ExtResource( 22 )]
+[node name="scientist" type="Skeleton" parent="." instance=ExtResource( 24 )]
 transform = Transform( -2.45109e-09, -0.0560745, 0, -2.45109e-09, 1.07141e-16, 0.0560745, -0.0560745, 2.45109e-09, -2.45109e-09, 7.35393, 1.27204, -7.81627 )
 bones/0/name = "BIP02"
 bones/0/parent = -1
@@ -560,20 +550,18 @@ bones/21/parent = 20
 bones/21/rest = Transform( -0.173559, 0.984823, -1.73559e-07, -0.984823, -0.173559, -9.84823e-07, -1e-06, 0, 1, 1.68102, 0.975106, 0.213387 )
 bones/21/enabled = true
 bones/21/bound_children = [  ]
-script = ExtResource( 18 )
+script = ExtResource( 21 )
 health = 100
 is_dead = false
 
-[node name="w_9mmhandgun" type="Skeleton" parent="." instance=ExtResource( 24 )]
-transform = Transform( -2.73901e-09, -0.0626612, 0, -2.73901e-09, 1.19726e-16, 0.0626612, -0.0626612, 2.73901e-09, -2.73901e-09, -6.53984, 5.05633, -8.58668 )
-bones/0/name = "SIDES01"
-bones/0/parent = -1
-bones/0/rest = Transform( -1, -4.74001e-14, -1.50996e-07, 1.50996e-07, -3.13916e-07, -1, 0, -1, 3.13916e-07, 1.0624, 0.240764, 1.24879 )
-bones/0/enabled = true
-bones/0/bound_children = [  ]
-script = ExtResource( 19 )
-
 [node name="map_script" type="Node" parent="."]
+script = ExtResource( 13 )
+
+[node name="door_default" type="Spatial" parent="." instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6535, 8.01703, -7.91416 )
 script = ExtResource( 20 )
+move_sound = ExtResource( 18 )
+stop_sound = ExtResource( 19 )
+move_speed = 1
 
 [connection signal="trigger" from="QodotMap/entity_4_button" to="QodotMap/entity_1_mover" method="use"]

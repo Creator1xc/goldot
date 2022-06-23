@@ -38,6 +38,8 @@ onready var aim_cast = $Head/Camera/aim_cast
 onready var hud = $hud
 onready var ammo_show = $hud/ammo
 onready var ammo_counter = $hud/ammo/ammo_counter
+onready var velocity_display = $hud/debug/VBoxContainer/velocity
+onready var is_on_floor_display = $hud/debug/VBoxContainer/isonfloor
 
 onready var menu = $pause_menu
 
@@ -167,9 +169,11 @@ func play_footstep():
 
 
 func _physics_process(delta):
+	
 	weapon_select()
 	direction = Vector3()
-	
+	velocity_display.text = str("Veloctiy: ", movement)
+	is_on_floor_display.text = str("Is on floor: ", is_on_floor())
 	
 	health_display.text = str(health)
 	

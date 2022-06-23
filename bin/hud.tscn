@@ -60,3 +60,20 @@ margin_top = -19.0
 margin_right = -3.0
 margin_bottom = -3.0
 text = "NULL"
+
+[node name="debug" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="debug"]
+margin_right = 40.0
+margin_bottom = 32.0
+
+[node name="velocity" type="Label" parent="debug/VBoxContainer"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="isonfloor" type="Label" parent="debug/VBoxContainer"]
+margin_top = 18.0
+margin_right = 40.0
+margin_bottom = 32.0
